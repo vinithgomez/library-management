@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library Management System</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a; color: #e2e8f0;
+    }
+    .card {
+      width: min(92vw, 520px); padding: 36px 32px; border-radius: 16px;
+      background: #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,.4); text-align: center;
+    }
+    h1 { margin: 0 0 6px; font-size: 1.6rem; }
+    p.sub { margin: 0 0 26px; color: #94a3b8; font-size: .95rem; }
+    .buttons { display: grid; gap: 12px; }
+    a.btn {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 18px; border-radius: 10px; text-decoration: none; font-weight: 600;
+      color: #fff; background: #3b82f6; transition: transform .1s, background .15s;
+    }
+    a.btn:hover { background: #2563eb; transform: translateY(-1px); }
+    a.btn span.path { font-family: ui-monospace, Consolas, monospace; font-weight: 400; font-size: .85rem; opacity: .85; }
+    .foot { margin-top: 24px; font-size: .8rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Library Management System</h1>
+    <p class="sub">Spring Boot REST API. Click an endpoint to view its data.</p>
+    <div class="buttons">
+      <a class="btn" href="/api/books">Books <span class="path">/api/books</span></a>
+      <a class="btn" href="/api/members">Members <span class="path">/api/members</span></a>
+      <a class="btn" href="/api/loans">Loans <span class="path">/api/loans</span></a>
+    </div>
+    <div class="foot">Borrow and return use POST requests, so test them with Postman or curl.</div>
+  </main>
+</body>
+</html>
